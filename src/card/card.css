@@ -1,0 +1,41 @@
+.Card {
+    padding: 1em;
+    border-radius: 0.3em;
+    margin: 1em;
+    cursor: pointer;
+    height: 10vmin;
+    width: 12vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(12px + 1vmin);
+    font-weight: 600;
+}
+
+.face-on {
+    background-color: teal;
+    animation: 1s cubic-bezier(0.075, 0.82, 0.165, 1) card-flip-on;
+}
+
+.face-off {
+    background-color: salmon;
+    animation: 0.5s ease-in card-flip-off;
+}
+
+@keyframes card-flip-on {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes card-flip-off {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(-1);
+    }
+}
